@@ -1,21 +1,16 @@
 *** Settings ***
 Library  Selenium2Library
-Suite Setup  Open browser  ${APP_ROOT}  ${BROWSER}
+# Suite Setup  Open browser  ${APP_ROOT}  ${BROWSER}
 Suite Teardown  Close all browsers
 
 *** Variables ***
 ${APP_ROOT}  http://synergitech.co.uk
 ${BROWSER}  Firefox
 *** Keywords ***
-Log in to our application with
-    [Arguments]  ${username}  ${password}
-    input text  id=username  ${username}
-    Input password  id=password  ${password}
-    Click button  id=submit_button
-
-
+Go to the site home page
+    Open browser  ${APP_ROOT}   ${BROWSER}
 
 *** Test Cases ***
-Example test case
-    Log in to our application with  test_user  S3cr3tPa55w0rd
-    Page should contain  Welcome back, test_user
+Open Home Page
+    Go to the site home page
+    Title should be  Bespoke business software development in Lincoln | Synergi Tech Ltd

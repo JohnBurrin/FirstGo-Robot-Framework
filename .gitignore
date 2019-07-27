@@ -1,5 +1,7 @@
 .idea/
 geckodriver.exe
+chromedriver.exe
+chromedriver.log
 geckodriver.log
 log.html
 output.xml
