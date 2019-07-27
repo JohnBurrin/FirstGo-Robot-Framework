@@ -1,0 +1,9 @@
+.idea/
+geckodriver.exe
+geckodriver.log
+log.html
+output.xml
+report.html
+selenium*.png
+selenium*screenshot-2.png
+venv/
